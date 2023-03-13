@@ -4,7 +4,7 @@
         <marca>Renault</marca>
         <modelo>Clio</modelo>
         <motor>V8</motor>
-        <matrícula>3444-XSF</matrícula>
+        <matrícula>3444-KCS</matrícula>
         <kilómetros>999.999</kilómetros>
         <precio_orignal>5.500</precio_orignal>
         <precio_oferta>5.000</precio_oferta>
@@ -15,7 +15,7 @@
         <marca>Seat</marca>
         <modelo>Córdoba</modelo>
         <motor>1.6</motor>
-        <matrícula>4544-XML</matrícula>
+        <matrícula>4544-KCS</matrícula>
         <kilómetros>256.643</kilómetros>
         <precio_orignal>2.000</precio_orignal>
         <precio_oferta>1.500</precio_oferta>
@@ -26,7 +26,7 @@
         <marca>Fiat</marca>
         <modelo>500</modelo>
         <motor>1.5</motor>
-        <matrícula>2222-XML</matrícula>
+        <matrícula>2222-KCS</matrícula>
         <kilómetros>500.000</kilómetros>
         <precio_orignal>2.000</precio_orignal>
         <precio_oferta>1.500</precio_oferta>
