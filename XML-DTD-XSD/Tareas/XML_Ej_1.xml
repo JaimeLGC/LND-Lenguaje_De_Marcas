@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concesionario>
+    <coche>
+        <marca>Renault</marca>
+        <modelo>Clio</modelo>
+        <motor>V8</motor>
+        <matrícula>3444-XSF</matrícula>
+        <kilómetros>999.999</kilómetros>
+        <precio_orignal>5.500</precio_orignal>
+        <precio_oferta>5.000</precio_oferta>
+        <extra>Body kit</extra>
+        <fotos>No</fotos>
+    </coche>
+    <coche>
+        <marca>Seat</marca>
+        <modelo>Córdoba</modelo>
+        <motor>1.6</motor>
+        <matrícula>4544-XML</matrícula>
+        <kilómetros>256.643</kilómetros>
+        <precio_orignal>2.000</precio_orignal>
+        <precio_oferta>1.500</precio_oferta>
+        <extra>Alerón</extra>
+        <fotos>No</fotos>
+    </coche>
+    <coche>
+        <marca>Fiat</marca>
+        <modelo>500</modelo>
+        <motor>1.5</motor>
+        <matrícula>2222-XML</matrícula>
+        <kilómetros>500.000</kilómetros>
+        <precio_orignal>2.000</precio_orignal>
+        <precio_oferta>1.500</precio_oferta>
+        <extra>No</extra>
+        <fotos>No</fotos>
+    </coche>
+</concesionario>
