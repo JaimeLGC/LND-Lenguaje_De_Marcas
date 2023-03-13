@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <ISBN>1234</ISBN>
+    <Título>Sueños de acero y neón</Título>
+    <Profundidad>Básico</Profundidad>
+    <Autores>Jorge Salvaje</Autores>
+    <Editorial>El barco de vapor</Editorial>
+    <Fecha_Publicación>12/07/2015</Fecha_Publicación>
+    <Página_Web>No</Página_Web>
+    <Precio>25</Precio>
+</libros>
