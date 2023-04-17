@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:template match="/">
+        <html>
+
+        <head>
+            <title>Recetas</title>
+        </head>
+
+        <body>
+            <xsl:apply-templates />
+        </body>
+
+        </html>
+    </xsl:template>
+
+    <xsl:template match="recetas">
+        <h1>Recetas:</h1>
+        <ul>
+            <xsl:apply-templates />
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="receta">
+        <li>
+            <h2><xsl:value-of select="nombre" /></h2>
+            <ul>
+                <li>Tipo: <xsl:value-of select="tipo/@definicion" /></li>
+                <li>Dificultad: <xsl:value-of select="dificultad" /></li>
+                <li>Ingredientes:
+                    <ul>
+                        <xsl:for-each select="ingredientes/ingrediente">
+                            <li><xsl:value-of select="@cantidad" /> de <xsl:value-of select="@nombre" /></li>
+                        </xsl:for-each>
+                    </ul>
+                </li>
+                <li>Calorías: <xsl:value-of select="calorias" /></li>
+                <li>Tiempo: <xsl:value-of select="tiempo" /></li>
+                <li>Elaboración: <xsl:value-of select="elaboracion" /></li>
+                <li>Pasos:
+                    <ol>
+                        <xsl:for-each select="pasos/paso">
+                            <li><xsl:value-of select="." /></li>
+                        </xsl:for-each>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </xsl:template>
+
+</xsl:stylesheet>

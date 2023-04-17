@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recetas</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            color: #cc3333;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Recetas</h1>
+    <xsl:for-each select="recetas/receta">
+        <h2><xsl:value-of select="nombre" /></h2>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <td><xsl:value-of select="tipo/@definicion" /></td>
+            </tr>
+            <tr>
+                <th>Dificultad</th>
+                <td><xsl:value-of select="dificultad" /></td>
+            </tr>
+            <tr>
+                <th>Ingredientes</th>
+                <td>
+                    <ul>
+                        <xsl:for-each select="ingredientes/ingrediente">
+                            <li><xsl:value-of select="@nombre" /> - <xsl:value-of select="@cantidad" /></li>
+                        </xsl:for-each>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Calorías</th>
+                <td><xsl:value-of select="calorias" /></td>
+            </tr>
+            <tr>
+                <th>Pasos</th>
+                <td>
+                    <ol>
+                        <xsl:for-each select="pasos/paso">
+                            <li><xsl:value-of select="." /></li>
+                        </xsl:for-each>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th>Tiempo</th>
+                <td><xsl:value-of select="tiempo" /></td>
+            </tr>
+            <tr>
+                <th>Elaboración</th>
+                <td><xsl:value-of select="elaboracion" /></td>
+            </tr>
+        </table>
+    </xsl:for-each>
+</body>
+
+</html>
