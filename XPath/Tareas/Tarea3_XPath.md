@@ -61,10 +61,14 @@ deseada.
 
 Aplicaciones web
 
+    /ies/modulos/modulo[ciclo='SMR']/nombre/text()
+
 **Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":**
 
 Administración de Sistemas Informáticos en Red
 Desarrollo de Aplicaciones Web
+
+    /ies/ciclos/ciclo[@id = /ies/modulos/modulo[nombre = 'Lenguajes de marcas y sistemas de gestión de información']/ciclo]/nombre
 
 **Nombre de los módulos de ciclos de Grado Superior:**
 
@@ -72,11 +76,17 @@ Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información
 Implantación de aplicaciones web
 
+    /ies/modulos/modulo[ciclo = /ies/ciclos/ciclo[grado = 'Superior']/@id]/nombre
+
 **Nombre de los módulos de ciclos cuyo título se aprobó en 2008:**
 
 Aplicaciones web
+
+    /ies/modulos/modulo[ciclo = /ies/ciclos/ciclo[decretoTitulo/@año = '2008']/@id]/nombre/text()
 
 **Grado de los ciclos con módulos de primer curso:**
 
 Superior
 Superior
+
+    /ies/ciclos/ciclo[@id = /ies/modulos/modulo[curso = 1]/ciclo]/grado/text()
