@@ -61,14 +61,10 @@ deseada.
 
 Aplicaciones web
 
-    ies/modulos/modulo[]
-
 **Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":**
 
 Administración de Sistemas Informáticos en Red
 Desarrollo de Aplicaciones Web
-
-    ies/ciclos/ciclo/nombre
 
 **Nombre de los módulos de ciclos de Grado Superior:**
 
