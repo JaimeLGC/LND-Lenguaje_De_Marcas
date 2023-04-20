@@ -1,6 +1,4 @@
-# XML: XPATH LND
-
-## Ejercicio 1
+## Ejercicio 1 XML: XPATH LND
 
 Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta
 deseada.
