@@ -160,7 +160,7 @@ Gestión de bases de datos Lenguajes de marcas y sistemas de gestión de informa
 
     /ies/modulos/modulo[horasSemanales>3]/horasSemanales
 
-## Ejercicio 3 XML: XPATH LND
+## Ejercicio 3 
 
 Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta
 deseada.
