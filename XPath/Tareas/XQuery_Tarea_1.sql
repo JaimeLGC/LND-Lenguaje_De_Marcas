@@ -24,13 +24,14 @@ for $baile in bailes/baile where $baile/sala = 1 and $baile/precio/@moneda = 'eu
 return $baile/nombre/text
 
 10. Obtener el precio del baile con el precio más caro.
-
+let baile = /bailes/baile
+return <precio>{max($baile/precio)}<precio>
 
 11. Obtener el precio y el nombre del baile con el precio más caro.
 
 
 12. Obtener el precio del baile con el precio más barato.
-
+++
 
 13. Obtener el precio y el nombre del baile con el precio más barato.
 
