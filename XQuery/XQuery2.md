@@ -97,7 +97,7 @@
 
 14. Muestra los nombres de los agentes cuya habilidad secundaria no es "Granada Cegadora".
 
-    for $agente in //agente where $agente/h
+    for $agente in //agente where $agente/habilidadSecundaria [not (= "Granada Cegadora")] return $agente/nombre
 
 15. Muestra las habilidades primarias de los agentes cuyos nombres no contienen la letra "e".
 
