@@ -32,7 +32,9 @@ Dado el siguiente documento XML realiza las siguientes consultas con XQuery:
 
 ### 6. Obtén el título de la película más cara.
 
-
+    for $pelicula in //pelicula
+    where $pelicula/precio = max(//precio)
+    return $pelicula
 
 ### 7. Encuentra todas las películas dirigidas por Christopher Nolan.
 
@@ -61,7 +63,9 @@ Dado el siguiente documento XML realiza las siguientes consultas con XQuery:
 
 ### 11. Encuentra todas las películas cuyo título comienza con la letra "L".
 
-
+    for $pelicula in //pelicula
+    where starts-with($pelicula/titulo, 'L')
+    return $pelicula
 
 ### 12. Obtén el número total de películas en la librería.
 
@@ -70,18 +74,54 @@ Dado el siguiente documento XML realiza las siguientes consultas con XQuery:
 
 ### 13. Encuentra la película con la duración más larga y muestra su título, duración y año de lanzamiento.
 
-    
+    for $pelicula in //pelicula
+    where $pelicula/duración = max(//duración)
+    return $pelicula
 
 ### 14. Calcula el precio total de todas las películas en la librería y muestra el resultado.
 
+    let $total := sum(//precio)
+    return $total
+
 ### 15. Encuentra todos los géneros distintos presentes en la librería y muestra la cantidad de películas para cada género.
+
+
 
 ### 16. Crea una variable que almacene el número total de películas en la librería. Luego, muestra el título y el precio de las películas cuyo precio es mayor que el promedio de todos los precios.
 
+    let $total := //pelicula
+    for $pelicula in //pelicula
+    where $pelicula/precio > avg($total/precio)
+    return 
+    <pelicula>
+        {$pelicula/título | $pelicula/precio}
+    </pelicula>
+
 ### 17. Escribe una consulta para encontrar el género con la película más corta y muestra el título y la duración de esa película.
+
+    for $pelicula in //pelicula
+    where $pelicula/duración = min(//duración)
+    return 
+    <pelicula>
+        {$pelicula/titulo | $pelicula/duración}
+    </pelicula>
 
 ### 18. Encuentra todas las películas cuyo título contiene la palabra "der" y muestra el título y el director.
 
+    for $pelicula in //pelicula
+    where contains($pelicula/titulo, 'der')
+    return
+    <pelicula>
+        {$pelicula/titulo | $pelicula/director}
+    </pelicula>
+
 ### 19. Escribe una consulta para obtener el título y el director de las tres películas más recientes en orden descendente de año de lanzamiento.
+
+    for $pelicula in //pelicula
+    order by $pelicula/año
+    return 
+    <pelicula>
+        {$pelicula/titulo | $pelicula/director}
+    </pelicula>
 
 ### 20. Encuentra todos los directores que han dirigido películas en más de un género y muestra el nombre de cada director junto con los géneros en los que ha trabajado
